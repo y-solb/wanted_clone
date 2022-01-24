@@ -264,34 +264,20 @@
     padding-left: 20px;
   }
 }
-/* slider */
-.slider {
-  position: relative;
-  overflow: hidden;
-  height: auto;
-}
 
+/* slider */
 .slider__container {
   position: relative;
   overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0 50px;
 }
 
-.slider__track {
-  opacity: 1;
-  width: 114092px;
-  position: relative;
-  left: 0;
-  top: 0;
-  padding: 0px calc(100% - 1248px);
+.slider {
+  width: 14092px;
 }
 
 .slider__box {
   display: table;
   padding: 0 12px;
-  box-sizing: content-box;
   float: left;
 }
 

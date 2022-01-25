@@ -276,6 +276,7 @@
 }
 
 .slider__box {
+  position: relative;
   display: table;
   padding: 0 12px;
   float: left;
@@ -333,7 +334,7 @@
   height: 146px;
   border-radius: 4px;
   background-color: #fff;
-  opacity: 0;
+  opacity: 1;
   text-align: left;
   left: 34px;
 }
@@ -344,4 +345,59 @@
   border: none;
   flex-shrink: 0;
   background-color: #ececec;
+}
+
+.info__title {
+  margin: 20px 20px 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.info__sub {
+  margin: 0 20px;
+  height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.64;
+  color: #333;
+}
+
+.info__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  min-width: 64px;
+  height: 40px;
+  margin: 6px 0 0 13px;
+  padding: 6px 8px;
+  font-weight: 700;
+  line-height: 1;
+  color: #36f;
+}
+
+.link__btn {
+  fill: #36f;
+  margin-top: -2px;
+  margin-right: -1px;
+  margin-left: 2px;
+  width: 1em;
+  height: 1em;
+}
+
+.bright {
+  filter: brightness(100%);
+}
+
+.dark {
+  filter: brightness(50%);
+}
+
+.display {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }

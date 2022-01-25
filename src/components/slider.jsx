@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import InfoBox from "./infoBox";
 import "../App.css";
 
 const Slider = ({ sliderData }) => {
@@ -47,14 +48,17 @@ const Slider = ({ sliderData }) => {
   return (
     <div className="slider__container">
       <div className="slider" ref={sliderRef}>
-        {sliderData.map((slider, index) => {
+        {sliderData.map((slider) => {
+          const filterType = slider.id === curIndex ? "bright" : "dark";
+          const displayType = slider.id === curIndex ? "display" : "hidden";
           return (
-            <div className="slider__box" key={index}>
+            <div className={`slider__box ${filterType}`} key={slider.id}>
               <img
                 className="slider__img"
                 src={slider.img}
                 alt="slider__image"
               />
+              <InfoBox slider={slider} displayType={displayType} />
             </div>
           );
         })}

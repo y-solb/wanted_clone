@@ -13,7 +13,6 @@
 }
 
 /* navbar */
-
 .navbar__container {
   width: 100%;
   position: fixed;
@@ -189,12 +188,19 @@
     height: 50px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar__box {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     font-size: 13px;
   }
   .main {
-    margin-top: 100px;
+    margin-top: 110px;
+    padding-top: 20px;
   }
   .navbar__box {
     margin: 0 auto;
@@ -235,6 +241,7 @@
     padding: 0 5px;
   }
   .info__btn {
+    display: flex;
     height: 100%;
     padding: 0 15px 0 5px;
     font-size: 14px;
@@ -263,16 +270,22 @@
     display: inline-block;
     padding-left: 20px;
   }
+  .info__btn {
+    display: flex;
+    height: 100%;
+    padding: 0 15px 0 5px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    line-height: 1;
+    padding-left: 10px;
+  }
 }
 
 /* slider */
 .slider__container {
   position: relative;
   overflow: hidden;
-}
-
-.slider {
-  width: 14092px;
 }
 
 .slider__box {
@@ -283,6 +296,7 @@
 }
 
 .slider__img {
+  height: 300px;
   border-radius: 4px;
 }
 
@@ -297,13 +311,12 @@
   height: 16px;
 }
 
-.right__btn {
+.slider_btn {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 120px;
-  right: calc((100% - 1200px) / 2);
   width: 30px;
   height: 60px;
   opacity: 0.5;
@@ -312,18 +325,12 @@
   font-size: 16px;
 }
 
+.right__btn {
+  right: calc((100% - 1200px) / 2);
+}
+
 .left__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 120px;
   left: calc((100% - 1210px) / 2);
-  width: 30px;
-  height: 60px;
-  opacity: 0.5;
-  border-radius: 15px;
-  background-color: #fff;
 }
 
 /* infoBox */
@@ -356,7 +363,6 @@
 
 .info__sub {
   margin: 0 20px;
-  height: 44px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.64;
@@ -400,4 +406,42 @@
 
 .hidden {
   opacity: 0;
+}
+
+@media (min-width: 1200px) {
+  .info__sub {
+    height: 44px;
+  }
+}
+@media (max-width: 1199px) {
+  .slider__img {
+    height: 183px;
+  }
+  .right__btn {
+    display: none;
+  }
+  .left__btn {
+    display: none;
+  }
+  .info__box {
+    position: initial;
+    text-align: center;
+    width: 100%;
+  }
+  .info__divider {
+    display: none;
+  }
+  .info__title {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .info__sub {
+    line-height: 1;
+    margin: 6px 0 0 0;
+    color: #666;
+  }
+  .info__link {
+    margin: 2px 0 0 12px;
+  }
 }
